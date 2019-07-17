@@ -85,6 +85,7 @@ function App() {
       </p>
       <DataHeader dataTitle = {title} currentDate = {date}/>
       <CreateImage type = {mediaType} dataUrl = {url}/>
+      <p className = "description">{description}</p>
     </div>
   );
 }
