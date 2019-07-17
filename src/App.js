@@ -5,7 +5,8 @@ import "./App.css";
 import axios from "axios"; 
 
 // import components
-import DataHeader from "./DataHeader"  
+import DataHeader from "./DataHeader"; 
+import CreateImage from "./CreateImage";
 
 
 function App() {
@@ -83,6 +84,7 @@ function App() {
         app! Have fun 🚀!
       </p>
       <DataHeader dataTitle = {title} currentDate = {date}/>
+      <CreateImage type = {mediaType} dataUrl = {url}/>
     </div>
   );
 }
