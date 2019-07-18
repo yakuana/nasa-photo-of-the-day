@@ -6,31 +6,13 @@ const CreateImage = (props) => {
 
     return (
       <div className = "photo">
-        {/* add data in header tags */}
-        <iframe src = {props.dataUrl} type = {props.type}></iframe>
+
+        {/* if media_type is a video, display iframe tag. otherwise, display the image tag */}
+        {props.type === "video" ? <iframe src = {props.dataUrl} type = {props.type}></iframe> : <img src = {props.dataUrl} alt = "Nasa's photo of the day."/>}
+        
       </div>
     );
 
-    // if (props.type == "image") {
-    //   // PoD is an image 
-    //   return (
-    //     <div className = "photo">
-    
-    //       {/* add data in header tags */}
-    //       <img src = {props.dataUrl} type = {props.type} alt = "Nasa's image of the day."/>
-          
-    //     </div>
-    //   );
-
-    // } else if (props.type == "video") {
-    //   // PoD is a video 
-    //     return (
-    //       <div className = "photo">
-    //         {/* add data in header tags */}
-    //         <iframe src = {props.dataUrl} type = {props.type}></iframe>
-    //       </div>
-    //     );
-    // }   
 };
   
 export default CreateImage; 

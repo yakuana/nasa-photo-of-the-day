@@ -1,6 +1,6 @@
 import React from "react";
 
-const DataHeader = ({dataTitle, currentDate}) => {
+const DataHeader = (props) => {
     
     // add the imported data to state
     
@@ -8,8 +8,8 @@ const DataHeader = ({dataTitle, currentDate}) => {
       <div className = "date-title-container">
         
         {/* add data in header tags */}
-        <h3 className = "date">{currentDate}</h3>
-        <h2 className = "title">{dataTitle}</h2>
+        <h3 className = "date">{props.currentDate}</h3>
+        <h2 className = "title">{props.dataTitle}</h2>
         
       </div>
     );

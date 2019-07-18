@@ -7,6 +7,7 @@ import axios from "axios";
 // import components
 import DataHeader from "./DataHeader"; 
 import CreateImage from "./CreateImage";
+import Header from "./Header"; 
 
 
 function App() {
@@ -31,6 +32,17 @@ function App() {
   const [mediaType, setMediaType] = useState(""); 
   const [title, setTitle] = useState(""); 
   const [url, setUrl] = useState(""); 
+  // const [nasaHomePage] = useState("https://www.nasa.gov/"); 
+  // const [nasaPhotoIndex] = useState("https://apod.nasa.gov/apod/lib/aptree.html"); 
+  // const [nasaArchive] = useState("https://apod.nasa.gov/apod/archivepix.html");
+
+  const [navBar] = useState({
+    link1: ["https://www.nasa.gov/", "Home"],
+    link2: ["https://apod.nasa.gov/apod/lib/aptree.html", "Index"],
+    link3: ["https://apod.nasa.gov/apod/archivepix.html", "Archive"]
+  })
+
+
 
 
   // get Nassa Api 
@@ -79,10 +91,7 @@ function App() {
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <Header navItems = {navBar}/>
       <DataHeader dataTitle = {title} currentDate = {date}/>
       <CreateImage type = {mediaType} dataUrl = {url}/>
       <p className = "description">{description}</p>
