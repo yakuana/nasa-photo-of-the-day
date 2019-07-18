@@ -4,10 +4,9 @@ import "./App.scss";
 import axios from "axios"; 
 
 // import components
-import DataHeader from "./DataHeader"; 
-import CreateImage from "./CreateImage";
-import Header from "./Header"; 
-
+import DataHeader from "./components/DataHeader"; 
+import CreateImage from "./components/CreateImage";
+import Header from "./components/Header"; 
 
 function App() {
 
@@ -21,27 +20,22 @@ function App() {
   //   "url":"https://www.youtube.com/embed/xc1SzgGhMKc?start=850"
   // }
 
-  // useful media types: image, video
-  
+  // possible PoD media types: image, video
   
 
-  // possibly useful hooks  
+  // useful hooks  
   const [date, setDate] = useState(""); 
   const [description, setDescription] = useState(""); 
   const [mediaType, setMediaType] = useState(""); 
   const [title, setTitle] = useState(""); 
   const [url, setUrl] = useState(""); 
-  // const [nasaHomePage] = useState("https://www.nasa.gov/"); 
-  // const [nasaPhotoIndex] = useState("https://apod.nasa.gov/apod/lib/aptree.html"); 
-  // const [nasaArchive] = useState("https://apod.nasa.gov/apod/archivepix.html");
 
+  // three nasa related links to use for the nav bar 
   const [navBar] = useState({
     link1: ["https://www.nasa.gov/", "Home"],
     link2: ["https://apod.nasa.gov/apod/lib/aptree.html", "Index"],
     link3: ["https://apod.nasa.gov/apod/archivepix.html", "Archive"]
   })
-
-
 
 
   // get Nassa Api 
@@ -50,7 +44,7 @@ function App() {
     // Nasa photo of the day (PoD) api (an object):
     // https://api.nasa.gov/planetary/apod?api_key=NNKOjkoul8n1CH18TWA9gwngW1s1SmjESPjNoUFo 
 
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=NNKOjkoul8n1CH18TWA9gwngW1s1SmjESPjNoUFo`)
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=b0Bih3UDqh7IhDoLQPLLojYnHcx5qLow7Llc3hgH`)
       .then((response) => {
         // successful 
 

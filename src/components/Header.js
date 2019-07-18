@@ -1,4 +1,5 @@
 import React from "react"; 
+import nasaLogo from "./img/nasaLogo"; 
 
 const Header = (props) => {
 
@@ -8,13 +9,15 @@ const Header = (props) => {
 
     return (
         <div className = "header">
-            <img src="./img/nasa-logo" className = "nasa-logo"/>
+            <img src={nasaLogo} alt="Nasa's logo" className = "nasa-logo"/>
             <nav className = "navigation">
 
-                {/* link[0][0] is a website link and link[0][1] is a string */}
+                {/* loop over navItems object and return a tags for navigation bar */}
                 {Object.entries(navItems).map((link) => {
                     console.log("link array of length 2:", link);
-                    return <a href = {link[1][0]} className = "tab">{link[1][1]}</a>})}
+                    
+                    // link[0] is the word "link 1/2/3", link[1][0] is a website link, link[1][1] is a string 
+                    return <a href = {link[1][0]} className = "tab" key={link[0]}>{link[1][1]}</a>})}
             </nav>
         </div>
     ); 
