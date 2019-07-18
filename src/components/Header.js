@@ -1,5 +1,6 @@
 import React from "react"; 
-import nasaLogo from "./img/nasaLogo"; 
+import nasaLogo from "./img/nasaLogo.jpg"; 
+import { NavContainer, NasaLogo, Navigation } from "./StyledComponents";
 
 const Header = (props) => {
 
@@ -8,9 +9,9 @@ const Header = (props) => {
     // console.log(navItems); 
 
     return (
-        <div className = "header">
-            <img src={nasaLogo} alt="Nasa's logo" className = "nasa-logo"/>
-            <nav className = "navigation">
+        <NavContainer className = "header">
+            <NasaLogo src={nasaLogo} alt="Nasa's logo" className = "nasa-logo"/>
+            <Navigation className = "navigation">
 
                 {/* loop over navItems object and return a tags for navigation bar */}
                 {Object.entries(navItems).map((link) => {
@@ -18,8 +19,9 @@ const Header = (props) => {
                     
                     // link[0] is the word "link 1/2/3", link[1][0] is a website link, link[1][1] is a string 
                     return <a href = {link[1][0]} className = "tab" key={link[0]}>{link[1][1]}</a>})}
-            </nav>
-        </div>
+                    
+            </Navigation>
+        </NavContainer>
     ); 
 
 }

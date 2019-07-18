@@ -1,27 +1,35 @@
 .App {
-    border: 1px solid red; 
-    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    // border: 1px solid red; 
+    font-family: Verdana; 
+    width: 95%; 
+    margin: 0 auto; 
 }
 
 .header {
-    border: 1px solid green; 
-    display: flex; 
-    flex-direction: row; 
-    justify-content: space-between; 
+    // border: 1px solid green; 
 
     .navigation {
-        border: 1px solid blue; 
+        // border: 1px solid blue; 
 
-        .tab {
-            border: 1px solid yellow; 
+        a {
+            // border: 1px solid yellow; 
+            text-decoration: none; 
+            color: black; 
+            font-size: 1.3rem;
+            font-weight: bold; 
         }
+
+        a:hover {
+            color: lighten(black, 50%);
+        }
+
     }
 }
 
-.photo {
-    border: 1px solid orangered; 
-}
+// .photo {
+//     border: 1px solid orangered; 
+// }
 
-.date-title-container {
-    border: 1px solid magenta; 
-}
+// .date-title-container {
+//     border: 1px solid magenta; 
+// }

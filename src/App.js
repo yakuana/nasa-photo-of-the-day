@@ -7,6 +7,7 @@ import axios from "axios";
 import DataHeader from "./components/DataHeader"; 
 import CreateImage from "./components/CreateImage";
 import Header from "./components/Header"; 
+import { Title, Description } from "./components/StyledComponents";
 
 function App() {
 
@@ -84,9 +85,10 @@ function App() {
   return (
     <div className="App">
       <Header navItems = {navBar}/>
-      <DataHeader dataTitle = {title} currentDate = {date}/>
       <CreateImage type = {mediaType} dataUrl = {url}/>
-      <p className = "description">{description}</p>
+      <Title>Nasa's {mediaType} of the Day</Title>
+      <DataHeader dataTitle = {title} currentDate = {date}/>
+      <Description className = "description">{description}</Description>
     </div>
   );
 }
