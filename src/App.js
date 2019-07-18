@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import "./App.scss"; 
+
 // import axios 
 import axios from "axios"; 
 
@@ -7,7 +8,11 @@ import axios from "axios";
 import DataHeader from "./components/DataHeader"; 
 import CreateImage from "./components/CreateImage";
 import Header from "./components/Header"; 
+import Footer from "./components/Footer"; 
+
+// import styles 
 import { Title, Description } from "./components/StyledComponents";
+
 
 function App() {
 
@@ -89,6 +94,7 @@ function App() {
       <Title>Nasa's {mediaType} of the Day</Title>
       <DataHeader dataTitle = {title} currentDate = {date}/>
       <Description className = "description">{description}</Description>
+      <Footer/>
     </div>
   );
 }

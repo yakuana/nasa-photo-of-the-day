@@ -11,6 +11,7 @@ export const Description = styled.p`
     padding: 10px 0; 
 `;
 
+
 // Header.js styles 
 export const NavContainer = styled.div`
     display: flex; 
@@ -31,10 +32,12 @@ export const NasaLogo = styled.img`
     padding-top: 10px; 
 `; 
 
+
 // DataHeader.js styles 
 export const DataDiv = styled.div`
     text-align: center; 
 `;
+
 
 // CreateImage.js styles 
 export const NasaImg = styled.img` 
@@ -44,3 +47,14 @@ export const NasaImg = styled.img`
 export const NasaImgDiv = styled.div`
     width: 100%; 
 `;
+
+
+// Footer.js styles 
+export const FooterDiv = styled.div`
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    font-size: 3rem; 
+    width: 15%; 
+    margin: 30px 0; 
+`; 
