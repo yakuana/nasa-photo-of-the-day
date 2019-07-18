@@ -8,11 +8,11 @@ const Header = (props) => {
 
     return (
         <div className = "header">
-            <h1 className = "nasa-logo">Nasa</h1>
+            <img src="./img/nasa-logo" className = "nasa-logo"/>
             <nav className = "navigation">
 
                 {/* link[0][0] is a website link and link[0][1] is a string */}
-                {Object.entries(props.navItems).map((link) => {
+                {Object.entries(navItems).map((link) => {
                     console.log("link array of length 2:", link);
                     return <a href = {link[1][0]} className = "tab">{link[1][1]}</a>})}
             </nav>

@@ -1,0 +1,27 @@
+.App {
+    border: 1px solid red; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+.header {
+    border: 1px solid green; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+
+    .navigation {
+        border: 1px solid blue; 
+
+        .tab {
+            border: 1px solid yellow; 
+        }
+    }
+}
+
+.photo {
+    border: 1px solid orangered; 
+}
+
+.date-title-container {
+    border: 1px solid magenta; 
+}

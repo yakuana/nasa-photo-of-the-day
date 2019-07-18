@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react";
-import "./App.css";
-
+import "./App.scss"; 
 // import axios 
 import axios from "axios"; 
 
@@ -86,7 +85,6 @@ function App() {
       })
 
   }, []);
-
 
 
   return (
