@@ -1,0 +1,41 @@
+.App {
+    // border: 1px solid red; 
+    font-family: Verdana; 
+    width: 95%; 
+    margin: 0 auto; 
+}
+
+.header {
+    // border: 1px solid green; 
+
+    .navigation {
+        // border: 1px solid blue; 
+
+        a {
+            // border: 1px solid yellow; 
+            text-decoration: none; 
+            color: black; 
+            font-size: 1.3rem;
+            font-weight: bold; 
+        }
+
+        a:hover {
+            color: lighten(black, 50%);
+        }
+
+    }
+}
+
+.footer-logo {
+    // border: 1px solid yellow; 
+    text-decoration: none; 
+    color: black; 
+}
+
+// .photo {
+//     border: 1px solid orangered; 
+// }
+
+// .date-title-container {
+//     border: 1px solid magenta; 
+// }
